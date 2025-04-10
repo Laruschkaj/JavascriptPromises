@@ -4,35 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Pokémon</title>
+    <title>Random Pokémon Generator</title>
     <style>
-        .pokemon {
-            display: inline-block;
-            margin: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        img {
-            width: 100px;
-            height: 100px;
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+            background-color: #f3f3f3;
         }
 
         button {
-            padding: 10px;
-            margin: 20px;
+            padding: 10px 20px;
             font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #pokemon-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .pokemon {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .pokemon img {
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
 
 <body>
-    <button id="fetchButton">Get Random Pokémon</button>
-    <div id="pokemonContainer"></div>
 
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <h1>Random Pokémon Generator</h1>
+    <button id="fetch-pokemon">Fetch Random Pokémon</button>
+    <div id="pokemon-container"></div>
+
+    <script src="app.js"></script> <!-- Link to the JavaScript file -->
 </body>
 
 </html>
